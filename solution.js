@@ -15,17 +15,17 @@ function MaximalSquare(strArr) {
     return maxSquare*maxSquare;
 }
 
-function findMaxSquare (firstArr, rows, cols, level) {
-    if ((rows + level < firstArr.length) && (cols + level < firstArr[0].length)) {  
+function findMaxSquare (_2DArr, rows, cols, level) {
+    if ((rows + level < _2DArr.length) && (cols + level < _2DArr[0].length)) {  
         let recurseMe = true;
         for (let i = 0; i <= level; i++) {
-            if (!(firstArr[rows + level][cols + i] === '1' &&
-                  firstArr[rows + i][cols + level] === '1')) {   //will check the square of a given element
+            if (!(_2DArr[rows + level][cols + i] === '1' &&
+                  _2DArr[rows + i][cols + level] === '1')) {   //will check the square of a given element
                     recurseMe = false;                           //based on the level
             }
         }
     
-        if (recurseMe) return findMaxSquare(firstArr, rows, cols, ++level); //if the first square consists of '1'
+        if (recurseMe) return findMaxSquare(_2DArr, rows, cols, ++level); //if the first square consists of '1'
     }                                                                       //function will recurse itself while increasing the level
     else return level;                                                      //in order to check the next bigger
 }                                                                           //square from the given element
