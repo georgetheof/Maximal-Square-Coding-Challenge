@@ -1,6 +1,6 @@
 # Maximal-Square-Coding-Challenge
 
-Challenge from https://coderbyte.com/editor/guest:Maximal%20Square:JavaScript
+Challenge from https://coderbyte.com/
 
 - Description
 
@@ -21,6 +21,6 @@ Output:9
 Input:["0111", "1101", "0111"]
 Output:1
 
-Note: In order to test it locally, replace line 34 with 
+<b>Note</b>: In order to test it locally, replace line 34 with 
 
 MaximalSquare(["0111", "1111", "1111", "1111"]);
