@@ -1,5 +1,5 @@
 function MaximalSquare(strArr) {
-    if (strArr.every(x => { return (x.indexOf('1') === -1)})) return '0'; //check if '1' character exists at least once
+    if (!strArr.some(x => x.includes('1')) return '0'; //check if '1' character exists at least once
     let newArr = strArr.map(x => x.split('')); //format given array into a two dimensional array
     let maxSquare = 1;
 
